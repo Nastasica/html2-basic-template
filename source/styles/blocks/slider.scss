@@ -1,0 +1,63 @@
+.slider {
+  background-color: rgba(243, 235, 225, 1);
+  display: flex;
+  flex-direction: row;
+}
+
+.slider__wrapper {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.slider__card {
+  padding-bottom: 60px;
+}
+
+.slider__image {
+  display: block;
+  width: 280px;
+  height: 280px;
+  margin-bottom: 10px;
+}
+
+.slider__text {
+  color: rgba(120, 89, 207, 1);
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  display: block;
+}
+
+
+.slider__title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+.slider__description{
+  text-align: center;
+  margin:0;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+
+.slider__buy {
+  margin: 0 25px;
+}
+
+.slider__button-step{
+  display: none;
+}
+
+.slider__button {
+  padding: 0;
+ border: none;
+ background-color:rgba(243, 235, 225, 1) ;
+}

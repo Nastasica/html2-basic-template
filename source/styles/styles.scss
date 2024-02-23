@@ -2,6 +2,32 @@
 @import "./global/variables.scss";
 @import "./global/global.scss";
 @import "./global/fonts.scss";
-
+@import "./global/visually-hidden.scss";
 /* BLOCKS */
-@import "./blocks/header.scss";
+@import "./blocks/page.scss";
+@import "./blocks/button.scss";
+@import "./blocks/main-header.scss";
+@import "./blocks/nav-user.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/title.scss";
+@import "./blocks/features.scss";
+@import "./blocks/subtitle.scss";
+@import "./blocks/reasons.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/form.scss";
+@import "./blocks/bar.scss";
+@import "./blocks/field-range.scss";
+@import "./blocks/field-radio.scss";
+@import "./blocks/select.scss";
+@import "./blocks/select-container.scss";
+@import "./blocks/select-title.scss";
+@import "./blocks/products.scss";
+@import "./blocks/form-legend.scss";
+@import "./blocks/new-price.scss";
+@import "./blocks/card-product.scss";
+@import "./blocks/price.scss";
+@import "./blocks/pagination.scss";
+@import "./blocks/map.scss";
+@import "./blocks/footer.scss";

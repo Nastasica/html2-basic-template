@@ -1,0 +1,14 @@
+.footer__wrapper{
+  width: 280px;
+  margin: 0 auto;
+}
+
+.footer__social{
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__social-list{
+  display: flex;
+  justify-content: space-between;
+}
