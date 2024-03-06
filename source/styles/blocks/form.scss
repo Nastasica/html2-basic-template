@@ -5,14 +5,49 @@
   margin-bottom: 30px;
 }
 
+.form__button-container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: start;
+  }
+}
+
+
 .form__button {
   width: 100%;
   font-family: inherit;
   margin-bottom: 20px;
-  &--reset{
-    background-color:rgba(255, 255, 255, 1);
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    width: 137px;
+    margin-right: 20px;
+    padding: 8px 22px;
+  }
+
+  &--reset {
+    background-color: rgba(255, 255, 255, 1);
     color: rgba(120, 89, 207, 1);
     margin-bottom: 44px;
+
+    @media (min-width: $tablet-width) {
+      margin: 0;
+      width: 137px;
+    }
   }
 }
 
+.form__button--reset:hover,
+.form__button--reset:focus {
+  color: rgba(255, 255, 255, 1);
+}
+
+.form__button--reset:disabled {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(226, 226, 226, 1);
+}

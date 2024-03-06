@@ -1,0 +1,20 @@
+.social__link {
+  display: flex;
+  align-self: center;
+  padding: 10px;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(240, 235, 255, 1);
+    border-radius: 4px;
+  }
+
+  &:active {
+    background-color: rgba(120, 89, 207, 0.25);
+    border-radius: 4px;
+  }
+}
+
+.social__link:hover .social__img {
+  fill: rgba(120, 89, 207, 1);
+}

@@ -1,0 +1,16 @@
+.logo {
+  width: 34px;
+  height: 41px;
+  margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 82px;
+    height: 86px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 170px;
+    height: 36px;
+    margin-right: 5px;
+  }
+}

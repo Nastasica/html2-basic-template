@@ -1,6 +1,12 @@
 .price{
   display: flex;
   justify-content: space-between;
+  @media (min-width: $tablet-width){
+    justify-content: center;
+  }
+  @media (min-width: $desktop-width) {
+    justify-content: start;
+   }
 }
 .price__old {
   color: rgb(120, 89, 207);
@@ -24,7 +30,7 @@
   margin-left: 0 auto;
   text-transform: none;
   font-family: inherit;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   width: 141px;

@@ -1,12 +1,22 @@
-
 .features__wrapper {
   width: 280px;
   margin: 0 auto;
   text-align: center;
+  padding-top: 50px;
+
+  @media (min-width: $tablet-width) {
+    width: 728px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1360px;
+    padding: 100px 0 120px;
+  }
 }
 
 .features__title {
   margin: 0;
+  margin-bottom: 5px;
   word-wrap: break-word;
 }
 
@@ -14,4 +24,8 @@
   margin: 0;
   margin-bottom: 36px;
   word-wrap: break-word;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+  }
 }

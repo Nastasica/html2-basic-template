@@ -1,9 +1,13 @@
 .field-range__title {
-  margin-bottom: 20px;
+  margin-bottom: 33px;
 }
 
 .field-range__bar {
-  margin-bottom: 24px;
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+  }
 }
 
 .field-range__input {
@@ -19,6 +23,9 @@
   text-align: center;
   color: rgba(51, 51, 51, 1);
 
+  @media (min-width: $tablet-width) {
+    width: 87px;
+  }
 }
 
 .field-range__dash {
@@ -35,4 +42,3 @@
 .field-range__input--to[value="0"] {
   color: rgba(189, 189, 189, 1);
 }
-

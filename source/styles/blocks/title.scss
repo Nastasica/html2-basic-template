@@ -6,4 +6,13 @@
   line-height: 16px;
   text-align: center;
   display: block;
+
+  &--footer {
+    margin: 0;
+    text-transform: none;
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 12px;
+    text-align: left;
+  }
 }

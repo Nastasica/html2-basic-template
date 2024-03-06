@@ -2,4 +2,14 @@
   display: flex;
   align-items: baseline;
   margin-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    right: 30px;
+    order: 3;
+  }
 }
