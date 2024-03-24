@@ -1,0 +1,41 @@
+/* =========== Button - product__add-to-basket */
+
+.product__add-to-basket {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: $base-white;
+  background: $base-primary;
+  border-radius: 4px;
+  border: none;
+  padding: 8px 20px 8px 46px;
+  cursor: pointer;
+  position: relative;
+}
+
+.product__add-to-basket::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 16px;
+  background-image: url('../../images/icons/stack.svg#basket-plus');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  left: 20px;
+  top: 10px;
+}
+
+.product__add-to-basket:hover,
+.product__add-to-basket:focus {
+  background-color: $primary-lighter;
+}
+
+.product__add-to-basket:active {
+  background-color: $primary-darker;
+}
+
+.product__add-to-basket:disabled {
+  background-color: $base-grey;
+  cursor: auto;
+}

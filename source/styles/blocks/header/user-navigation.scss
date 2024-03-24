@@ -1,0 +1,67 @@
+/* ========= User-navigation */
+
+.user-navigation__link {
+  display: block;
+  height: 60px;
+  padding: 22px;
+  text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 0;
+    line-height: 0;
+    height: auto;
+    padding: 32px 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    padding: 30px 20px;
+  }
+}
+
+.user-navigation__text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    color: $base-black;
+  }
+}
+
+.user-navigation__link:active {
+  background-color: $base-secondary;
+}
+
+.user-navigation__icon {
+  fill: $base-black;
+
+  @media (min-width: $desktop-width) {
+    margin-right: 8px;
+  }
+}
+
+/* =============== Desktop */
+
+@media (min-width: 1440px) {
+  .user-navigation__item {
+    margin-right: 20px;
+  }
+
+  .user-navigation__item:last-child {
+    margin-right: 0;
+  }
+
+  /* Изменение цвета у текста при наведении */
+  .user-navigation__link:hover .user-navigation__text,
+  .user-navigation__link:focus .user-navigation__text {
+    color: $base-primary;
+  }
+
+  /* Изменение цвета у иконки при наведении */
+  .user-navigation__link:hover .user-navigation__icon,
+  .user-navigation__link:focus .user-navigation__icon {
+    fill: $base-primary;
+  }
+}

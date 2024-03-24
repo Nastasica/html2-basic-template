@@ -1,0 +1,85 @@
+.range__controls {
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.range__scale {
+  width: 100%;
+  height: 2px;
+  background-color: $light-grey;
+  position: relative;
+}
+
+.range__bar {
+  width: 90%;
+  height: 4px;
+  background-color: $primary-lighter;
+  left: 0;
+  position: relative;
+  top: -1px;
+}
+
+.range__toggle {
+  cursor: pointer;
+}
+
+.range__toggle--min,
+.range__toggle--max {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: $base-white;
+  border-radius: 50%;
+  border: 2px solid $primary-lighter;
+  top: -11px;
+}
+
+.range__toggle--max {
+  right: 20px;
+}
+
+.range__label--from {
+  margin-right: 6px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 7px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 16px;
+  }
+}
+
+.range__label--before {
+  margin-left: 6px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 7px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 17px;
+  }
+}
+
+.range__input {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  width: 125px;
+  color: $base-black;
+  border: 2px solid $primary-lighter;
+  border-radius: 4px;
+  background-color: $base-white;
+  padding: 7px 10px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 96px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+  }
+}

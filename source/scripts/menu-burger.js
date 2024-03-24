@@ -1,14 +1,11 @@
-const navMain = document.querySelector('.main-nav');
-const navToggle = document.querySelector('.main-nav__toggle');
+const burger = document.querySelector('.burger');
+const burgerMenu = burger.querySelector('.burger__menu');
+const siteNavigation = document.querySelector('.site-navigation');
 
-navMain.classList.remove('main-nav--nojs');
-
-navToggle.addEventListener('click', () => {
-  if (navMain.classList.contains('main-nav--closed')) {
-    navMain.classList.remove('main-nav--closed');
-    navMain.classList.add('main-nav--opened');
-  } else {
-    navMain.classList.add('main-nav--closed');
-    navMain.classList.remove('main-nav--opened');
-  }
-});
+if (window.matchMedia('(max-width: 767px)').matches) {
+  burger.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    siteNavigation.classList.toggle('open');
+    burgerMenu.classList.toggle('open');
+  });
+}

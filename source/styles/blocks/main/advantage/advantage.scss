@@ -1,0 +1,151 @@
+/* ================ Аdvantage */
+
+.advantage__title {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.48px;
+  color: $base-primary;
+  margin: 0;
+  padding-top: 50px;
+  margin-bottom: 4px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 101px;
+  }
+}
+
+.advantage__subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+  }
+}
+
+.advantage__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  text-align: center;
+  margin-bottom: 60px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 30px;
+    text-align: left;
+    margin: 0 10px 73px 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 88px;
+  }
+}
+
+.advantage__item {
+  position: relative;
+  margin-bottom: 32px;
+  padding-top: 66px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    padding-left: 72px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 76px;
+    padding-left: 0px;
+  }
+}
+
+.advantage__item--speed::before,
+.advantage__item--fit::before,
+.advantage__item--energy::before,
+.advantage__item--eco::before {
+  content: '';
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 52px;
+  height: 56px;
+  top: 0;
+  left: 114px;
+
+  @media (min-width: $tablet-width) {
+    left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 133px;
+  }
+}
+
+.advantage__item--speed::before {
+  background-image: url('../../images/icons/stack.svg#feature_speed');
+}
+
+.advantage__item--fit::before {
+  background-image: url('../../images/icons/stack.svg#feature_fit');
+}
+
+.advantage__item--energy::before {
+  background-image: url('../../images/icons/stack.svg#feature_energy');
+}
+
+.advantage__item--eco::before {
+  background-image: url('../../images/icons/stack.svg#feature_eco');
+}
+
+.advantage__item:last-child {
+  margin-bottom: 30px;
+}
+
+.advantage__type {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+  margin: 0;
+  margin-bottom: 4px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
+}
+
+.advantage__description {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

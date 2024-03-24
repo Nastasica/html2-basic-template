@@ -1,0 +1,256 @@
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
+}
+
+.pagination__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+}
+
+.pagination__item {
+  margin-right: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 20px;
+  }
+}
+
+.pagination__item:last-child {
+  margin-right: 0;
+}
+
+.pagination__prev,
+.pagination__next {
+  position: relative;
+  background-color: $base-white;
+  border: none;
+  padding: 20px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+
+  @media (min-width: $tablet-width) {
+    padding: 8px 20px;
+  }
+}
+
+.pagination__prev-text,
+.pagination__next-text {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $base-primary;
+  }
+}
+
+.pagination__prev::before,
+.pagination__next::before {
+  content: '';
+  position: absolute;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 10px;
+  top: 15px;
+  left: 15px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+/* Добавили фиолетовую стрелку кнопке назад */
+.pagination__prev::before {
+  background-image: url('../../images/icons/stack.svg#arroy-left-pagination');
+  width: 10px;
+  height: 10px;
+}
+
+/* Добавили фиолетовую стрелку кнопке вперед */
+.pagination__next::before {
+  background-image: url('../../images/icons/stack.svg#arroy-right-pagination');
+  width: 10px;
+  height: 10px;
+}
+
+/* Меняем цвет фона у кнопки назад при состоянии hover/focus */
+.pagination__prev:hover,
+.pagination__prev:focus {
+  background-color: $primary-lighter;
+}
+
+/* Меняем стрелку с фиолетовой на белую у кнопки назад при состоянии hover/focus */
+.pagination__prev:hover.pagination__prev::before,
+.pagination__prev:focus.pagination__prev::before {
+  background-image: url('../img/decorative/pagination-white-arrow.svg');
+}
+
+/* Меняем цвет фона у кнопки вперед при состоянии hover/focus */
+.pagination__next:hover,
+.pagination__next:focus {
+  background-color: $primary-lighter;
+}
+
+/* Меняем цвет стрелки у кнопки вперед при состоянии hover/focus */
+.pagination__next:hover.pagination__next::before,
+.pagination__next:focus.pagination__next::before {
+  background-image: url('../img/decorative/pagination-white-arrow.svg');
+  transform: rotate(180deg);
+}
+
+/* Меняем цвет фона у кнопки назад/вперед при состоянии active */
+.pagination__prev:active,
+.pagination__next:active {
+  background-color: $primary-darker;
+}
+
+/* Меняем цвет фона у кнопки назад/вперед при состоянии disabled */
+.pagination__prev:disabled,
+.pagination__next:disabled {
+  background-color: $light-grey;
+  cursor: auto;
+}
+
+/* Меняем цвет стрелки у кнопки назад при состоянии disabled */
+.pagination__prev:disabled.pagination__prev::before {
+  background-image: url('../img/decorative/pagination-white-arrow.svg');
+}
+
+/* Меняем цвет стрелки у кнопки вперед при состоянии disabled */
+.pagination__next:disabled.pagination__next::before {
+  background-image: url('../img/decorative/pagination-white-arrow.svg');
+  transform: rotate(180deg);
+}
+
+.pagination__page {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $base-primary;
+  background-color: $base-white;
+  padding: 8px 18px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    padding: 8px 16px;
+  }
+}
+
+/* Меняем фон и цвет цифр при состоянии hover/focus */
+.pagination__page:hover,
+.pagination__page:focus {
+  background-color: $primary-lighter;
+  color: $base-white;
+}
+
+/* Меняем фон цифр при состоянии active */
+.pagination__page:active {
+  background-color: $primary-darker;
+}
+
+/* Меняем фон и цвет цифр при состоянии disabled */
+.pagination__page:disabled {
+  background-color: $light-grey;
+  cursor: auto;
+  color: $base-white;
+}
+
+.pagination__page--current {
+  font-weight: 600;
+  color: $base-black;
+  background-color: transparent;
+}
+
+.pagination__page--current:hover,
+.pagination__page--current:focus {
+  background-color: transparent;
+  color: $base-black;
+  cursor: auto;
+}
+
+/* ============ Tablet */
+
+@media (min-width: $tablet-width) {
+  .pagination__carousel {
+    margin: 0 20px;
+  }
+
+  /* Меняем цвет текста у кнопки назад при состоянии hover/focus */
+  .pagination__prev:hover .pagination__prev-text,
+  .pagination__prev:focus .pagination__prev-text {
+    color: $base-white;
+  }
+
+  /* Меняем цвет текста у кнопки вперед при состоянии hover/focus */
+  .pagination__next:hover .pagination__next-text,
+  .pagination__next:focus .pagination__next-text {
+    color: $base-white;
+  }
+
+  /* Меняем цвет текста у кнопки назад при состоянии disabled */
+  .pagination__prev:disabled .pagination__prev-text {
+    color: $base-white;
+  }
+
+  /* Меняем цвет текста у кнопки вперед при состоянии disabled */
+  .pagination__next:disabled .pagination__next-text {
+    color: $base-white;
+  }
+}
+
+/* =========== Catalog Desktop */
+
+/* ==============Desktop */
+
+@media (min-width: $desktop-width) {
+  .catalog__rows {
+    display: grid;
+    grid-template-columns: 318px 1fr;
+    column-gap: 30px;
+    padding-bottom: 118px;
+  }
+
+  .filter {
+    padding-bottom: 0;
+    padding-top: 4px;
+  }
+
+  .product__list {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 460px);
+  }
+
+  .product__item:hover,
+  .product__item:focus {
+    box-shadow: 0px 5px 15px $black-with-opacity-1;
+  }
+
+  .filter__fieldset-blocks {
+    display: block;
+  }
+
+  .filter__block:last-child {
+    margin-bottom: 0;
+  }
+
+  .product__item {
+    padding: 55px 30px 30px 30px;
+  }
+}

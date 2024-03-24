@@ -59,6 +59,7 @@
     "w3c-html-validator": "1.6.4"
   },
   "dependencies": {
+    "leaflet": "^1.9.4",
     "no-ui-slider": "^1.2.0",
     "nouislider": "^14.7.0"
   }

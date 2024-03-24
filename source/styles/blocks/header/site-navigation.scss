@@ -1,0 +1,94 @@
+/* ========= Site-navigation */
+
+.site-navigation {
+  flex-direction: column;
+
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background-color: $base-white;
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    z-index: auto;
+    visibility: visible;
+    opacity: 1;
+    background-color: transparent;
+    flex-direction: row;
+    margin-right: 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+    margin-left: 153px;
+  }
+}
+
+.site-navigation.open {
+  z-index: 5;
+  opacity: 1;
+  visibility: visible;
+}
+
+.site-navigation__item {
+  border-top: 1px solid $base-secondary;
+
+  @media (min-width: $tablet-width) {
+    border-top: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 20px;
+  }
+}
+
+.site-navigation__item:last-child {
+  border-bottom: 1px solid $base-secondary;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+  }
+}
+
+.site-navigation__link {
+  display: block;
+  text-decoration: none;
+  color: $base-black;
+  padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 30px 20px;
+  }
+}
+
+.site-navigation__link:active {
+  background-color: $base-secondary;
+}
+
+/* ============ Tablet */
+
+@media (min-width: 767px) {
+  .site-navigation__link--active {
+    color: $base-primary;
+    border-bottom: 2px solid $base-primary;
+  }
+
+  .site-navigation__link:hover,
+  .site-navigation__link:focus {
+    color: $base-primary;
+  }
+
+  .site-navigation__link:active {
+    background-color: $base-secondary;
+  }
+}

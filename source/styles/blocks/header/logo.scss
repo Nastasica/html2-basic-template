@@ -1,0 +1,17 @@
+.logo{
+  display: block;
+  width: 32px;
+  height: 36px;
+
+  @media (min-width: $tablet-width) {
+    width: 82px;
+    height: 86px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 170px;
+    height: 36px;
+    margin-right: 20px;
+  }
+}
+

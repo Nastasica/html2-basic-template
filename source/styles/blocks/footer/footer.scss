@@ -1,0 +1,132 @@
+.footer {
+
+  @media (min-width: $tablet-width) {
+    padding-top: 38px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 40px;
+  }
+}
+
+.footer__wrapper {
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 0 40px;
+
+    display: grid;
+    grid-template-columns: 318px 1fr;
+    gap: 20px 30px;
+  }
+}
+
+.footer__block,
+.footer-nav {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.footer__line {
+  border: 1px solid $base-secondary;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.footer__columns-links {
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 9px;
+    margin-bottom: 0;
+  }
+}
+
+.footer__logo-heading {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+    margin-bottom: 50px;
+
+  }
+}
+
+.footer__logo-img {
+  height: 36px;
+  width: 82px;
+
+  @media (min-width: $tablet-width) {
+    height: 36px;
+    width: 170px;
+  }
+}
+
+
+
+
+.footer__block--social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 19px 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 29px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+}
+
+.footer__logo-link {
+  font-size: 0;
+}
+
+.footer__logo-link--tablet {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 10px;
+  }
+}
+
+.footer__logo-image {
+  width: 82px;
+  height: 36px;
+}

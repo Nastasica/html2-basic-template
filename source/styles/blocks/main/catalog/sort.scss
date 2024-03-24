@@ -1,0 +1,126 @@
+.sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
+}
+
+.sort__title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 11px;
+  }
+}
+
+.sort__type {
+  position: relative;
+  border: none;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: $base-primary;
+  background-color: transparent;
+  text-transform: lowercase;
+  cursor: pointer;
+  padding: 4px 30px 4px 10px;
+  border-radius: 4px;
+}
+
+.sort__type::after {
+  content: '';
+  position: absolute;
+  background-image: url('../../images/icons/stack.svg#arrow-bottom-sort');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 10px;
+  height: 10px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sort__type:hover,
+.sort__type:focus {
+  background-color: $base-secondary;
+}
+
+.sort__type:active {
+  background-color: transparent;
+}
+
+.sort__type.show-sort-list.sort__type::after {
+  transform: translateY(-55%) rotate(180deg);
+  top: 55%;
+}
+
+.sort__list {
+  position: absolute;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  top: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: $base-white;
+  text-transform: lowercase;
+  border-radius: 4px;
+  box-shadow: 0 5px 10px $black-with-opacity-2;
+
+  /* Скрываем варианты сортировки */
+  opacity: 0;
+  z-index: -5;
+  visibility: hidden;
+  transition: all 0.3s ease-out;
+}
+
+/* Показываем варианты сортировки */
+.sort__list.show-sort-list {
+  opacity: 1;
+  visibility: visible;
+  z-index: 5;
+  top: calc(100% + 10px);
+}
+
+.sort__item {
+  border-bottom: 1px solid $base-secondary;
+}
+
+.sort__item:last-child {
+  border-bottom: none;
+}
+
+.sort__link {
+  display: block;
+  text-decoration: none;
+  color: $base-black;
+  padding: 8px 14px;
+}
+
+.sort__link:hover,
+.sort__link:focus {
+  background-color: $base-secondary;
+}
+
+/* Выбранный тип сортировки */
+.sort__link--current {
+  background-color: $base-primary;
+  color: $base-white;
+}
+
+/* Отмена подсвечивания при наведении у выбранного типа сортировки */
+.sort__link--current:hover,
+.sort__link--current:focus {
+  background-color: $base-primary;
+}

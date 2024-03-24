@@ -1,61 +1,64 @@
-// Получаем необходимые элементы слайдера
-const sliderCards = document.querySelectorAll('.slider__card');
-const stepButtons = document.querySelectorAll('.step__button');
-const prevButton = document.querySelector('.slider-button-prev');
-const nextButton = document.querySelector('.slider-button-next');
+const sliderCards = document.querySelectorAll('.promo__item');
+const stepButtons = document.querySelectorAll('.dot__btn');
+const prevButton = document.querySelector('.promo__button-prev');
+const nextButton = document.querySelector('.promo__button-next');
 
 let currentIndex = 0;
-function showSlide(index) {
 
+function showSlide(index) {
   sliderCards.forEach((card) => {
     card.style.display = 'none';
   });
 
   if (window.innerWidth <= 767) {
-
     sliderCards[index].style.display = 'block';
   } else {
     sliderCards[index].style.display = 'flex';
   }
 
-  const backgrounds = ['#F3EBE1', '#EAE6FC', '#E2E2E2', ];
+  const backgrounds = ['#F3EBE1', '#EAE6FC', '#E2E2E2'];
   const currentBackground = backgrounds[index];
-  document.querySelector('.slider').style.backgroundColor = currentBackground;
+  document.querySelector('.promo').style.backgroundColor = currentBackground;
 
   updateUI(index, currentBackground);
 }
 
 function updateStepButtons(index) {
   stepButtons.forEach((button, i) => {
-    button.classList.toggle('active', i === index);
+    button.classList.toggle('dot__btn--active', i === index);
   });
+
+  prevButton.disabled = false;
+  nextButton.disabled = false;
 }
 
 function updateUI(index, backgroundColor) {
   updateStepButtons(index);
-  stepButtons.forEach((button, i) => {
-    button.style.backgroundColor = i === index ? 'rgba(120, 89, 207, 1)' : '';
-  });
-  document.querySelector('.slider-button-prev').style.backgroundColor = backgroundColor;
-  document.querySelector('.slider-button-next').style.backgroundColor = backgroundColor;
-  prevButton.disabled = index === 0;
-  nextButton.disabled = index === sliderCards.length - 1;
+  prevButton.style.backgroundColor = backgroundColor;
+  nextButton.style.backgroundColor = backgroundColor;
+
+  // Добавляем условие для планшетной версии
+  if (window.innerWidth >= 768 && window.innerWidth <= 1339) {
+    // Задаем цвета для градиента в зависимости от индекса слайда
+    const gradientColor1 = ['#F3EBE1', '#EAE6FC', '#E2E2E2'];
+    const gradientColor2 = ['#FFFFFF', '#FFFFFF', '#FFFFFF'];
+    document.querySelector('.promo').style.background = `linear-gradient(180deg, ${gradientColor1[index]} 0%, ${gradientColor1[index]} 77%, ${gradientColor2[index]} 77%, ${gradientColor2[index]})`;
+  } else {
+    // Просто меняем цвет фона для остальных версий
+    document.querySelector('.promo').style.background = backgroundColor;
+  }
 }
 
 showSlide(currentIndex);
 
 prevButton.addEventListener('click', () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-    showSlide(currentIndex);
-  }
+  currentIndex = (currentIndex - 1 + sliderCards.length) % sliderCards.length;
+  showSlide(currentIndex);
 });
 
 nextButton.addEventListener('click', () => {
-  if (currentIndex < sliderCards.length - 1) {
-    currentIndex++;
-    showSlide(currentIndex);
-  }
+  currentIndex = (currentIndex + 1) % sliderCards.length;
+  showSlide(currentIndex);
 });
 
 stepButtons.forEach((button, index) => {

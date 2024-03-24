@@ -1,0 +1,59 @@
+/* ============ Promo dots */
+
+.dot {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    line-height: 0;
+    font-size: 0;
+  }
+}
+
+/* ========== Desktop only */
+
+@media (min-width: 1440px) {
+  .dot__item {
+    margin-right: 8px;
+  }
+
+  .dot__btn {
+    position: relative;
+    width: 62px;
+    height: 4px;
+    background-color: transparent;
+    border: none;
+    padding: 10px 0;
+    cursor: pointer;
+  }
+
+  .dot__line {
+    width: 62px;
+    display: block;
+    height: 4px;
+    background-color: $base-white;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .dot__btn--active .dot__line {
+    background-color: $base-primary;
+  }
+
+  .dot__btn:hover .dot__line,
+  .dot__btn:focus .dot__line {
+    background: $primary-opacity;
+  }
+
+  .dot__btn--active:hover .dot__line,
+  .dot__btn--active:focus .dot__line {
+    background-color: $base-primary;
+  }
+}
