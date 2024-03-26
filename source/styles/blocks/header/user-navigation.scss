@@ -1,6 +1,5 @@
-/* ========= User-navigation */
-
 .user-navigation__link {
+  color: $base-black;
   display: block;
   height: 60px;
   padding: 22px;
@@ -42,8 +41,6 @@
   }
 }
 
-/* =============== Desktop */
-
 @media (min-width: 1440px) {
   .user-navigation__item {
     margin-right: 20px;
@@ -53,15 +50,13 @@
     margin-right: 0;
   }
 
-  /* Изменение цвета у текста при наведении */
   .user-navigation__link:hover .user-navigation__text,
   .user-navigation__link:focus .user-navigation__text {
     color: $base-primary;
   }
 
-  /* Изменение цвета у иконки при наведении */
   .user-navigation__link:hover .user-navigation__icon,
   .user-navigation__link:focus .user-navigation__icon {
-    fill: $base-primary;
+    color: $base-primary;
   }
 }

@@ -75,13 +75,19 @@
 
 .promo__container {
   @media (min-width: $tablet-width) {
-   display: flex;
-   flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
+
   @media (min-width: $desktop-width) {
     flex-direction: row-reverse;
     align-items: center
   }
+}
+
+.promo__content {
+  display: flex;
+  flex-direction: column;
 }
 
 .promo__title {
@@ -113,6 +119,8 @@
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
+    align-self: center;
+    width: 600px;
     font-size: 20px;
     line-height: 32px;
     margin-bottom: 20px;
@@ -181,16 +189,12 @@
   cursor: auto;
 }
 
-/* ========== Tablet */
-
 @media (min-width: $tablet-width) {
 
   .promo__price-block {
     text-align: center;
   }
 }
-
-/* =============== Desktop */
 
 @media (min-width: $desktop-width) {
 
@@ -290,10 +294,11 @@
 }
 
 .promo__button-prev:disabled.promo__button-prev::before {
-  background-image: url('../img/decorative/arrow-disabled.svg');
+  background-image: url('../../images/icons/stack.svg#arroy-icon-disabled');
+  cursor: not-allowed;
   background-repeat: no-repeat;
   background-position: 0 0;
-  width: 11px;
+  width: 20px;
   height: 20px;
   right: 5px;
 
@@ -303,14 +308,14 @@
 }
 
 .promo__button-next:disabled.promo__button-next::before {
-  background-image: url('../img/decorative/arrow-disabled.svg');
+  background-image: url('../../images/icons/stack.svg#arroy-icon-disabled');
+  cursor: not-allowed;
   background-repeat: no-repeat;
   background-position: 0 0;
-  width: 11px;
+  width: 20px;
   height: 20px;
   left: 5px;
-  transform: rotate(180deg) translateY(-50%);
-  top: 47%;
+  top: 49%;
 
   @media (min-width: $tablet-width) {
     left: 35px;
@@ -324,7 +329,7 @@
 
 .promo__button-prev:disabled.promo__button-prev,
 .promo__button-next:disabled.promo__button-next {
-  cursor: auto;
+  cursor: not-allowed;
   background: transparent;
 }
 

@@ -1,9 +1,9 @@
 import L from 'leaflet';
 const map = L.map('leaflet-map')
   .setView({
-    lat: 59.968137,
-    lng: 30.316272,
-  }, 10);
+    lat: 59.96833875898696,
+    lng: 30.317468147345455,
+  }, 18);
 
 L.tileLayer(
   'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -12,11 +12,18 @@ L.tileLayer(
   },
 ).addTo(map);
 
+const customIcon = L.icon({
+  iconUrl: '/images/map-pin.png',
+  iconSize: [38, 50],
+  iconAnchor: [16, 32],
+});
+
 const marker = L.marker(
   {
-    lat: 59.968137,
-    lng: 30.316272,
+    lat: 59.96833875898696,
+    lng: 30.317468147345455,
   },
+  { icon: customIcon }
 );
 
 marker.addTo(map);

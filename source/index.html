@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <title>Drink2Go</title>
@@ -22,6 +23,7 @@
   <link rel="preload" href="fonts/Montserrat-SemiBold.woff" as="font" type="font/woff" crossorigin="anonymous">
   <link rel="preload" href="fonts/Montserrat-ExtraBold.woff" as="font" type="font/woff" crossorigin="anonymous">
 </head>
+
 <body class="page__body">
   <header class="header header--nojs">
     <div class="header__wrapper wrapper">
@@ -38,7 +40,7 @@
         <p class="header__logo-heading">Интернет-магазин<br>кофейных напитков</p>
       </div>
       <nav class="header__nav nav">
-       <ul class="nav__list site-navigation">
+        <ul class="nav__list site-navigation">
           <li class="site-navigation__item">
             <a href="#" class="site-navigation__link site-navigation__link--active">
               Главная
@@ -122,10 +124,8 @@
                 <div class="promo__content">
                   <span class="promo__badge">Новинка!</span>
                   <h3 class="promo__title">Декаф Флэт Уайт</h3>
-                  <p class="promo__description">Свежесваренный кофе без кофеина из Эфиопии
-                    <br class="promo__text-wrapping">
-                    с натуральным фермерским молоком — то, что нужно<br class="promo__text-wrapping">
-                    для расслабления после тяжёлого рабочего дня
+                  <p class="promo__description">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским
+                    молоком — то, что нужно для расслабления после тяжёлого рабочего дня
                   </p>
                   <div class="promo__price-block">
                     <span class="promo__price-old">
@@ -166,18 +166,16 @@
                 </div>
                 <div class="promo__content">
                   <span class="promo__badge">Новинка!</span>
-                  <h3 class="promo__title">Декаф Флэт Уайт</h3>
-                  <p class="promo__description">Свежесваренный кофе без кофеина из Эфиопии
-                    <br class="promo__text-wrapping">
-                    с натуральным фермерским молоком — то, что нужно<br class="promo__text-wrapping">
-                    для расслабления после тяжёлого рабочего дня
+                  <h3 class="promo__title">Лавандовый Латте</h3>
+                  <p class="promo__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и
+                    лавандовым сиропом унесёт вас прямо на вершину Радужных гор
                   </p>
                   <div class="promo__price-block">
                     <span class="promo__price-old">
-                      295<span class="promo-currency">&#8381;</span>
+                      285<span class="promo-currency">&#8381;</span>
                     </span>
                     <span class="promo__price-new">
-                      225<span class="promo-currency">&#8381;</span>
+                      265<span class="promo-currency">&#8381;</span>
                     </span>
                     <button class="promo__button-order" type="button">Заказать</button>
                   </div>
@@ -212,18 +210,16 @@
                 </div>
                 <div class="promo__content">
                   <span class="promo__badge">Новинка!</span>
-                  <h3 class="promo__title">Декаф Флэт Уайт</h3>
-                  <p class="promo__description">Свежесваренный кофе без кофеина из Эфиопии
-                    <br class="promo__text-wrapping">
-                    с натуральным фермерским молоком — то, что нужно<br class="promo__text-wrapping">
-                    для расслабления после тяжёлого рабочего дня
+                  <h3 class="promo__title">Тройной Эспрессо</h3>
+                  <p class="promo__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из
+                    Колумбии покажет вам, что такое настоящая бодрость
                   </p>
                   <div class="promo__price-block">
                     <span class="promo__price-old">
-                      295<span class="promo-currency">&#8381;</span>
+                      395<span class="promo-currency">&#8381;</span>
                     </span>
                     <span class="promo__price-new">
-                      225<span class="promo-currency">&#8381;</span>
+                      375<span class="promo-currency">&#8381;</span>
                     </span>
                     <button class="promo__button-order" type="button">Заказать</button>
                   </div>
@@ -249,10 +245,10 @@
             </button>
           </li>
         </ul>
-        <button class="promo__button-prev" type="button">
+        <button class="promo__button-prev" type="button" disabled>
           <span class="visually-hidden">Предыдущий.</span>
         </button>
-        <button class="promo__button-next" type="button">
+        <button class="promo__button-next" type="button"disabled>
           <span class="visually-hidden">Следующий.</span>
         </button>
       </div>
@@ -297,14 +293,16 @@
                     <div class="range__scale">
                       <div class="range__bar"></div>
                     </div>
-                    <button class="range__toggle range__toggle--min"><span class="visually-hidden">Ручка минимальной
+                    <button class="range__toggle range__toggle--min" type="button"><span class="visually-hidden">Ручка
+                        минимальной
                         цены</span></button>
-                    <button class="range__toggle range__toggle--max"><span class="visually-hidden">Ручка максимальной
+                    <button class="range__toggle range__toggle--max" type="button"><span class="visually-hidden">Ручка
+                        максимальной
                         цены</span></button>
                   </div>
                   <div class="range__price-controls">
                     <label class="range__label range__label--from" for="from">
-                      <input class="range__input" id="from" type="text" name="min-price" value="0">
+                      <input class="range__input range__input--from" id="from" type="text" name="min-price" value="0">
                     </label>
                     <span class="range__divider">&#8211;</span>
                     <label class="range__label range__label--before" for="before">
@@ -555,7 +553,7 @@
             <source type="image/webp" media="(max-width: 767px)"
               srcset="images/map_mobile@1x.webp 1x, images/map_mobile@2x.webp 2x" width="320" height="420">
             <img class="map__img" src="images/map_mobile@1x.jpg" srcset="images/map_mobile@2x.jpg" width="320"
-              height="420" alt="Карта местоположения Drink2Go">
+              height="420" alt="Санкт-Петербург, набережная реки Карповки, дом 5.">
           </picture>
         </noscript>
       </div>
@@ -576,8 +574,8 @@
           кофейных напитков</p>
         <ul class="footer__social social">
           <li class="social__item">
-            <a class="social__link" href="href=https://vk.com/htmlacademy">
-              <span class="visually-hidden">Пинтерест.</span>
+            <a class="social__link" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">Вконтакте.</span>
               <svg class="social__img" width="22" height="22">
                 <use xlink:href="images/icons/stack.svg#vk"></use>
               </svg>
@@ -665,4 +663,5 @@
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="scripts/index.js"></script>
 </body>
+
 </html>

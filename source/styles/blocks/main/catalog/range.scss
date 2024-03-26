@@ -21,7 +21,44 @@
 
 .range__toggle {
   cursor: pointer;
+  position: relative;
 }
+
+.range__toggle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+.range__toggle:hover::before,
+.range__toggle:focus::before {
+  background-color: $primary-opacity;
+}
+
+.range__toggle:active::before {
+  background-color: $primary-lighter;
+}
+
+.range__toggle:disabled::before {
+  cursor: not-allowed;
+  background-color: transparent;
+}
+
+.range__toggle:disabled {
+  border-color: $base-grey ;
+}
+
+.range__toggle:disabled + .range__scale > .range__bar {
+  background-color: $base-grey ;
+}
+
 
 .range__toggle--min,
 .range__toggle--max {
@@ -33,6 +70,7 @@
   border: 2px solid $primary-lighter;
   top: -11px;
 }
+
 
 .range__toggle--max {
   right: 20px;
@@ -82,4 +120,8 @@
   @media (min-width: $desktop-width) {
     width: 134px;
   }
+}
+
+.range__input--from {
+  color: $base-grey;
 }

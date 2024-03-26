@@ -33,6 +33,7 @@
   width: 320px;
   margin: 0 auto;
   padding: 0 20px;
+  margin-bottom: 30px;
 
   @media (min-width: $tablet-width) {
     width: auto;
@@ -42,8 +43,11 @@
 }
 
 .footer__line {
+  margin-top: 20px;
+  margin-bottom: 20px;
   border: 1px solid $base-secondary;
   margin: 0;
+ margin: 20px 0;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -89,14 +93,12 @@
   }
 }
 
-
-
-
 .footer__block--social {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 19px 20px;
+  padding-bottom: 0;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 29px;

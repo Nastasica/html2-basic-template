@@ -28,8 +28,11 @@ function updateStepButtons(index) {
     button.classList.toggle('dot__btn--active', i === index);
   });
 
-  prevButton.disabled = false;
-  nextButton.disabled = false;
+  // Блокируем кнопку предыдущего слайда, если текущий слайд - первый
+  prevButton.disabled = index === 0;
+
+  // Блокируем кнопку следующего слайда, если текущий слайд - последний
+  nextButton.disabled = index === sliderCards.length - 1;
 }
 
 function updateUI(index, backgroundColor) {
@@ -37,14 +40,11 @@ function updateUI(index, backgroundColor) {
   prevButton.style.backgroundColor = backgroundColor;
   nextButton.style.backgroundColor = backgroundColor;
 
-  // Добавляем условие для планшетной версии
   if (window.innerWidth >= 768 && window.innerWidth <= 1339) {
-    // Задаем цвета для градиента в зависимости от индекса слайда
     const gradientColor1 = ['#F3EBE1', '#EAE6FC', '#E2E2E2'];
     const gradientColor2 = ['#FFFFFF', '#FFFFFF', '#FFFFFF'];
     document.querySelector('.promo').style.background = `linear-gradient(180deg, ${gradientColor1[index]} 0%, ${gradientColor1[index]} 77%, ${gradientColor2[index]} 77%, ${gradientColor2[index]})`;
   } else {
-    // Просто меняем цвет фона для остальных версий
     document.querySelector('.promo').style.background = backgroundColor;
   }
 }

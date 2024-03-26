@@ -1,5 +1,3 @@
-/* ============== Filter__reset */
-
 .filter__reset {
   font-family: 'Montserrat', 'Arial', sans-serif;
   font-size: 16px;
@@ -45,8 +43,6 @@
   cursor: auto;
 }
 
-/* ========== Filter */
-
 @media (min-width: $tablet-width) {
 
   .filter__title--price {
@@ -90,6 +86,14 @@
 .filter__radio:checked+.filter__label--milk::before {
   border: 2px solid $base-primary;
 }
+
+
+
+.filter__radio:focus-visible + .filter__label--milk::before {
+  outline: 2px solid rgba(68, 68, 68, 1);
+}
+
+
 
 .filter__label {
   font-size: 16px;
@@ -193,4 +197,8 @@
 .filter__checkbox:checked:disabled+.filter__label--country::after {
   content: '';
   background-color: $base-grey;
+}
+
+.filter__checkbox:focus-visible + .filter__label--country::before {
+  outline: 2px solid rgba(68, 68, 68, 1);
 }
