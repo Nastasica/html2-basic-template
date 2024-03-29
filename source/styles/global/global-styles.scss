@@ -3,8 +3,8 @@ body {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -17,5 +17,3 @@ img {
   height: auto;
   object-fit: contain;
 }
-
-

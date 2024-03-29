@@ -2,7 +2,7 @@
   background: $flat-white;
 
   @media (min-width: $tablet-width) {
-    background: linear-gradient(180deg, $promo-background-1 0%, $promo-background-1 77%, $promo-background-2 77%);
+    background: linear-gradient(180deg, $promo-background-1 0%, $promo-background-1 72%, $promo-background-2 72%);
   }
 }
 
@@ -16,6 +16,11 @@
   @media (min-width: $tablet-width) {
     overflow: hidden;
     padding-top: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 10px;
+    height: 632px;
   }
 }
 
@@ -38,18 +43,20 @@
 
   @media (min-width: $tablet-width) {
     min-width: 728px;
+    padding-bottom: 50px;
   }
 
   @media (min-width: $desktop-width) {
     min-width: 1360px;
     flex-direction: row-reverse;
     justify-content: center;
-
   }
 }
 
 .promo__img-container {
   display: flex;
+  padding-top: 20px;
+  padding-bottom: 3px;
 
   @media (min-width: $tablet-width) {
     justify-content: center;
@@ -81,7 +88,8 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: row-reverse;
-    align-items: center
+    align-items: center;
+    column-gap: 28px;
   }
 }
 
@@ -116,7 +124,7 @@
   line-height: 20px;
   text-align: center;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 
   @media (min-width: $tablet-width) {
     align-self: center;
@@ -163,7 +171,7 @@
 }
 
 .promo__button-order {
-  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -190,14 +198,12 @@
 }
 
 @media (min-width: $tablet-width) {
-
   .promo__price-block {
     text-align: center;
   }
 }
 
 @media (min-width: $desktop-width) {
-
   .promo__text-wrapping {
     display: block;
   }
@@ -218,14 +224,14 @@
   top: 0;
 
   @media (min-width: $tablet-width) {
-    height: 670px;
+    height: 637px;
     width: 80px;
     z-index: 5;
   }
 }
 
 .promo__button-prev {
-  left: 0;
+  left: -7px;
 }
 
 .promo__button-next {
@@ -233,45 +239,42 @@
 }
 
 .promo__button-prev::before {
-  content: '';
+  content: "";
   position: absolute;
-  background-image: url('../../images/icons/stack.svg#arrow');
+  background-image: url("../../images/icons/stack.svg#arrow");
   background-repeat: no-repeat;
   background-position: 0 0;
-  top: 300px;
+  top: 318px;
   width: 11px;
   height: 20px;
+
+  @media (min-width: $tablet-width) {
+    top: 311px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 348px;
+  }
 }
 
 .promo__button-next::before {
-  content: '';
+  content: "";
   position: absolute;
-  background-image: url('../../images/icons/stack.svg#arrow');
+  background-image: url("../../images/icons/stack.svg#arrow");
   width: 11px;
   height: 20px;
   right: 5px;
   rotate: 180deg;
-
-  @media (min-width: $tablet-width) {
-    right: 35px;
-    top: 320px;
-  }
-
-  @media (min-width: $desktop-width) {
-    top: 357px;
-  }
-}
-
-.promo__button-next::before {
   left: 5px;
-  top: 300px;
+  top: 318px;
 
   @media (min-width: $tablet-width) {
     left: 35px;
+    top: 311px;
   }
 
   @media (min-width: $desktop-width) {
-    top: 336px;
+    top: 346px;
   }
 }
 
@@ -294,21 +297,25 @@
 }
 
 .promo__button-prev:disabled.promo__button-prev::before {
-  background-image: url('../../images/icons/stack.svg#arroy-icon-disabled');
+  background-image: url("../../images/icons/stack.svg#arroy-icon-disabled");
   cursor: not-allowed;
   background-repeat: no-repeat;
   background-position: 0 0;
   width: 20px;
   height: 20px;
-  right: 5px;
+  right: -5px;
 
   @media (min-width: $tablet-width) {
-    right: 35px;
+    right: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 24px;
   }
 }
 
 .promo__button-next:disabled.promo__button-next::before {
-  background-image: url('../../images/icons/stack.svg#arroy-icon-disabled');
+  background-image: url("../../images/icons/stack.svg#arroy-icon-disabled");
   cursor: not-allowed;
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -338,10 +345,5 @@
     margin-bottom: 0;
     background: $flat-white;
     padding-bottom: 61px;
-  }
-
-  .promo__carousel {
-    overflow: hidden;
-    padding-bottom: 19px;
   }
 }

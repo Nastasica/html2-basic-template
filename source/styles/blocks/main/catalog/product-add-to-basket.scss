@@ -1,25 +1,25 @@
-/* =========== Button - product__add-to-basket */
 
 .product__add-to-basket {
-  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
+  border-radius: 4px;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   color: $base-white;
   background: $base-primary;
-  border-radius: 4px;
   border: none;
+  width: 141px;
   padding: 8px 20px 8px 46px;
   cursor: pointer;
   position: relative;
 }
 
 .product__add-to-basket::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 20px;
   height: 16px;
-  background-image: url('../../images/icons/stack.svg#basket-plus');
+  background-image: url("../../images/icons/stack.svg#basket-plus");
   background-repeat: no-repeat;
   background-position: 0 0;
   left: 20px;

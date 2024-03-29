@@ -25,39 +25,38 @@
 </head>
 
 <body class="page__body">
-  <header class="header header--nojs">
+  <header class="header">
     <div class="header__wrapper wrapper">
       <div class="header__logo-block">
         <a class="header__logo-link logo" href="index.html">
           <picture>
-            <source srcset="images/logo/logo_small.svg" media="(max-width: 767px)">
-            <source srcset="images/logo/logo_middle.svg" media="(min-width: 768px) and (max-width: 1439px)">
-            <source srcset="images/logo/logo_big.svg" media="(min-width: 1440px)">
-            <img class="header__logo-img" src="images/logo/logo_small.svg" width="32" height="36"
-              alt="Логотип интернет-магазина кофейных напитков Drink2Go">
-          </picture>
+            <source type="image/svg+xml" srcset="images/logo/logo_small.svg"  media="(max-width: 767px)">
+            <source type="image/svg+xml" srcset="images/logo/logo_middle.svg"  media="(min-width: 768px) and (max-width: 1439px)">
+            <source type="image/svg+xml" srcset="images/logo/logo_big.svg"  media="(min-width: 1440px)">
+            <img class="header__logo-img" src="images/logo/logo_small.svg" width="32" height="36" alt="Логотип интернет-магазина кофейных напитков Drink2Go">
+        </picture>
         </a>
         <p class="header__logo-heading">Интернет-магазин<br>кофейных напитков</p>
       </div>
       <nav class="header__nav nav">
         <ul class="nav__list site-navigation">
           <li class="site-navigation__item">
-            <a href="#" class="site-navigation__link site-navigation__link--active">
+            <a class="site-navigation__link site-navigation__link--active" href="#" >
               Главная
             </a>
           </li>
           <li class="site-navigation__item">
-            <a href="#" class="site-navigation__link">
+            <a class="site-navigation__link" href="#" >
               Каталог
             </a>
           </li>
           <li class="site-navigation__item">
-            <a href="#" class="site-navigation__link">
+            <a class="site-navigation__link" href="#" >
               Доставка
             </a>
           </li>
           <li class="site-navigation__item">
-            <a href="#" class="site-navigation__link">
+            <a class="site-navigation__link" href="#" >
               О нас
             </a>
           </li>
@@ -84,6 +83,7 @@
         </ul>
       </nav>
       <button class="header__burger burger" type="button">
+        <span class="visually-hidden">Кнопка-бургер для открытия/закрытия меню.</span>
         <span class="burger__menu"></span>
       </button>
     </div>
@@ -117,7 +117,7 @@
                     <source type="image/png" media="(max-width: 767px)"
                       srcset="images/flat_white_mobile_slider.png 1x, images/flat_white_mobile_slider@2x.png 2x"
                       width="280" height="280">
-                    <img class="promo__image" src="images/flat_white_mobile_slider@1x.png"
+                    <img class="promo__image" src="images/flat_white_mobile_slider@1x.png" width="180" height="180"
                       alt="Банка кофе Декаф Флэт Уайт">
                   </picture>
                 </div>
@@ -161,7 +161,7 @@
                     <source type="image/png" media="(max-width: 767px)"
                       srcset="images/latte_mobile_slider@1x.png 1x, images/latte_mobile_slider@2x.png 2x" width="280"
                       height="280">
-                    <img class="promo__image" src="images/latte_mobile_slider@1x.png" alt="Банка кофе Лавандовый Латте">
+                    <img class="promo__image" src="images/latte_mobile_slider@1x.png" width="180" height="180" alt="Банка кофе Лавандовый Латте">
                   </picture>
                 </div>
                 <div class="promo__content">
@@ -204,7 +204,7 @@
                     <source type="image/png" media="(max-width: 767px)"
                       srcset="images/espresso_mobile_slider@1x.png 1x, images/espresso_mobile_slider@2x.png 2x"
                       width="280" height="280">
-                    <img class="promo__image" src="images/espresso_mobile_slider@1x.png"
+                    <img class="promo__image" src="images/espresso_mobile_slider@1x.png" width="180" height="180"
                       alt="Банка кофе Тройной Эспрессо">
                   </picture>
                 </div>
@@ -231,24 +231,27 @@
         <ul class="promo__dots dot">
           <li class="dot__item">
             <button class="dot__btn dot__btn--active" type="button">
+              <span class="visually-hidden">Перый слайд.</span>
               <span class="dot__line"></span>
             </button>
           </li>
           <li class="dot__item">
             <button class="dot__btn" type="button">
+              <span class="visually-hidden">Второй слайд.</span>
               <span class="dot__line"></span>
             </button>
           </li>
           <li class="dot__item">
             <button class="dot__btn" type="button">
+              <span class="visually-hidden">Третий слайд.</span>
               <span class="dot__line"></span>
             </button>
           </li>
         </ul>
-        <button class="promo__button-prev" type="button" disabled>
+        <button class="promo__button-prev" type="button">
           <span class="visually-hidden">Предыдущий.</span>
         </button>
-        <button class="promo__button-next" type="button"disabled>
+        <button class="promo__button-next" type="button">
           <span class="visually-hidden">Следующий.</span>
         </button>
       </div>
@@ -293,6 +296,7 @@
                     <div class="range__scale">
                       <div class="range__bar"></div>
                     </div>
+                    <div class="range__container"></div>
                     <button class="range__toggle range__toggle--min" type="button"><span class="visually-hidden">Ручка
                         минимальной
                         цены</span></button>
@@ -302,7 +306,7 @@
                   </div>
                   <div class="range__price-controls">
                     <label class="range__label range__label--from" for="from">
-                      <input class="range__input range__input--from" id="from" type="text" name="min-price" value="0">
+                      <input class="range__input range__input--from" id="from" type="text" name="min-price" placeholder="0">
                     </label>
                     <span class="range__divider">&#8211;</span>
                     <label class="range__label range__label--before" for="before">
@@ -311,59 +315,62 @@
                   </div>
                 </div>
               </fieldset>
-              <fieldset class="filter__block">
-                <legend class="filter__title">Наличие молока</legend>
+              <fieldset class="filter__block filter__block--milk">
+                <legend class="filter__title filter__title--milk">Наличие молока</legend>
                 <ul class="filter__list">
                   <li class="filter__item filter__item--milk">
                     <input class="filter__radio visually-hidden" type="radio" id="no-matter" name="availability-of-milk"
                       checked>
-                    <label for="no-matter" class="filter__label filter__label--milk">Неважно</label>
+                    <label class="filter__label filter__label--milk" for="no-matter" >Неважно</label>
                   </li>
                   <li class="filter__item filter__item--milk">
                     <input class="filter__radio visually-hidden" type="radio" id="only-animal"
                       name="availability-of-milk">
-                    <label for="only-animal" class="filter__label filter__label--milk">Только животное</label>
+                    <label class="filter__label filter__label--milk" for="only-animal"">Только животное</label>
                   </li>
                   <li class="filter__item filter__item--milk">
                     <input class="filter__radio visually-hidden" type="radio" id="only-vegetable"
                       name="availability-of-milk">
-                    <label for="only-vegetable" class="filter__label filter__label--milk">Только растительное</label>
+                    <label class="filter__label filter__label--milk" for="only-vegetable" >Только растительное</label>
                   </li>
                   <li class="filter__item filter__item--milk">
                     <input class="filter__radio visually-hidden" type="radio" id="without-milk"
                       name="availability-of-milk" disabled>
-                    <label for="without-milk" class="filter__label filter__label--milk">Без молока</label>
+                    <label class="filter__label filter__label--milk" for="without-milk">Без молока</label>
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="filter__block">
-                <legend class="filter__title">Страна произрастания</legend>
+              <fieldset class="filter__block filter__block--country">
+                <legend class="filter__title filter__title--country">Страна произрастания</legend>
                 <ul class="filter__list">
                   <li class="filter__item">
                     <input class="filter__checkbox visually-hidden" type="checkbox" id="country-1" name="Brazil"
                       checked>
-                    <label for="country-1" class="filter__label filter__label--country">Бразилия</label>
+                    <label class="filter__label filter__label--country" for="country-1" >Бразилия</label>
                   </li>
                   <li class="filter__item">
                     <input class="filter__checkbox visually-hidden" type="checkbox" id="country-2" name="Ethiopia">
-                    <label for="country-2" class="filter__label filter__label--country">Эфиопия</label>
+                    <label class="filter__label filter__label--country" for="country-2">Эфиопия</label>
                   </li>
                   <li class="filter__item">
                     <input class="filter__checkbox visually-hidden" type="checkbox" id="country-3" name="Colombia">
-                    <label for="country-3" class="filter__label filter__label--country">Колумбия</label>
+                    <label class="filter__label filter__label--country" for="country-3">Колумбия</label>
                   </li>
                   <li class="filter__item">
                     <input class="filter__checkbox visually-hidden" type="checkbox" id="country-4" name="Costa-Rica">
-                    <label for="country-4" class="filter__label filter__label--country">Коста-Рика</label>
+                    <label class="filter__label filter__label--country" for="country-4">Коста-Рика</label>
                   </li>
                   <li class="filter__item">
                     <input class="filter__checkbox visually-hidden" type="checkbox" id="country-5" name="Peru" disabled>
-                    <label for="country-5" class="filter__label filter__label--country">Перу</label>
+                    <label class="filter__label filter__label--country" for="country-5" >Перу</label>
                   </li>
                 </ul>
               </fieldset>
             </div>
-            <button class="filter__reset" type="reset">Сбросить фильтр</button>
+            <div class="filter__container">
+            <button class="filter__submit button" type="submit">Применить</button>
+            <button class="filter__reset button" type="reset">Сбросить</button>
+          </div>
           </form>
           <div class="catalog__product product">
             <div class="product__sorting sort">
@@ -564,8 +571,8 @@
       <div class="footer__block footer__block--social">
         <a class="footer__logo-link" href="#">
           <picture>
-            <source srcset="images/logo/logo_middle.svg" media="(max-width: 320px)">
-            <source srcset="images/logo/logo_big.svg" media="(min-width: 768px)">
+            <source type="image/svg+xml" srcset="images/logo/logo_middle.svg" media="(max-width: 320px)">
+            <source type="image/svg+xml" srcset="images/logo/logo_big.svg" media="(min-width: 768px)">
             <img class="footer__logo-img" src="images/logo/logo_middle.svg" width="170" height="36"
               alt="Логотип интернет-магазина кофейных напитков Drink2Go">
           </picture>
@@ -606,16 +613,16 @@
             <h3 class="footer-nav__title">Интернет-магазин</h3>
           </li>
           <li class="footer-nav__item">
-            <a href="#" class="footer-nav__link">Каталог</a>
+            <a class="footer-nav__link" href="#">Каталог</a>
           </li>
           <li class="footer-nav__item">
-            <a href="#" class="footer-nav__link">Доставка</a>
+            <a class="footer-nav__link" href="#">Доставка</a>
           </li>
           <li class="footer-nav__item">
-            <a href="#" class="footer-nav__link">Способы оплаты</a>
+            <a class="footer-nav__link" href="#">Способы оплаты</a>
           </li>
           <li class="footer-nav__item">
-            <a href="#" class="footer-nav__link">О нас</a>
+            <a class="footer-nav__link" href="#">О нас</a>
           </li>
         </ul>
         <hr class="footer__line">
@@ -624,36 +631,36 @@
             <h3 class="footer-nav__title">Медиа</h3>
           </li>
           <li class="footer-nav__item">
-            <a href="#" class="footer-nav__link">Блог</a>
+            <a class="footer-nav__link" href="#">Блог</a>
           </li>
           <li class="footer-nav__item">
-            <a href="#" class="footer-nav__link">Информация для СМИ</a>
+            <a class="footer-nav__link" href="#">Информация для СМИ</a>
           </li>
           <li class="footer-nav__item">
-            <a href="#" class="footer-nav__link">Правовая информация</a>
+            <a class="footer-nav__link" href="#">Правовая информация</a>
           </li>
         </ul>
         <hr class="footer__line">
-        <ul class="footer__nav footer-nav">
+        <ul class="footer__nav footer-nav footer__nav--contacts">
           <li class="footer-nav__item">
             <h3 class="footer-nav__title footer-nav__title--contacts">Контакты</h3>
           </li>
           <li class="footer-nav__item footer-nav__item--address">
-            <a href="https://yandex.ru/maps/-/CCUNFVTBsD"
-              class="footer-nav__link footer-nav__link--address">Санкт-Петербург, набережная реки Карповки, дом 5</a>
+            <a class="footer-nav__link footer-nav__link--address" href="https://yandex.ru/maps/-/CCUNFVTBsD"
+              >Санкт-Петербург, набережная реки Карповки, дом 5</a>
           </li>
           <li class="footer-nav__item footer-nav__item--phone">
-            <a href="tel:+79999999" class="footer-nav__link footer-nav__link--phone">+7 (999) 999-99-99</a>
+            <a class="footer-nav__link footer-nav__link--phone" href="tel:+79999999" >+7 (999) 999-99-99</a>
           </li>
         </ul>
       </div>
       <hr class="footer__line">
       <div class="footer__block copyright">
         <p class="copyright__text">Разработано в
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             HTML Academy
             <svg class="copyright__img" width="12" height="16">
-              <use xlink:href="images/icons/stack.svg#academy_logo"></use>
+              <use xlink:href="images/icons/stack.svg#academy-logo"></use>
             </svg>
           </a>
         </p>
@@ -663,5 +670,4 @@
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="scripts/index.js"></script>
 </body>
-
 </html>

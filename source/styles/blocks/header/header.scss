@@ -6,6 +6,10 @@
   text-transform: uppercase;
   position: relative;
   background-color: $base-white;
+
+  @media (min-width: $tablet-width) {
+    min-height: 80px;
+  }
 }
 
 .header__wrapper {
@@ -60,7 +64,6 @@
     height: 36px;
     margin-right: 20px;
   }
-
 }
 
 @media (max-width: $mobile-width-only) {
@@ -99,4 +102,3 @@
     display: none;
   }
 }
-

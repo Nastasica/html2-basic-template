@@ -1,16 +1,20 @@
 .footer {
-
   @media (min-width: $tablet-width) {
-    padding-top: 38px;
+    padding-top: 20px;
     padding-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 40px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 22px;
+  }
 }
 
 .footer__wrapper {
+  margin-bottom: 55px;
 
   @media (min-width: $tablet-width) {
     width: 768px;
@@ -21,19 +25,16 @@
   @media (min-width: $desktop-width) {
     width: 1440px;
     padding: 0 40px;
-
     display: grid;
     grid-template-columns: 318px 1fr;
-    gap: 20px 30px;
+    gap: 28px 30px;
   }
 }
 
-.footer__block,
-.footer-nav {
+.footer__block {
   width: 320px;
   margin: 0 auto;
   padding: 0 20px;
-  margin-bottom: 30px;
 
   @media (min-width: $tablet-width) {
     width: auto;
@@ -43,11 +44,10 @@
 }
 
 .footer__line {
-  margin-top: 20px;
-  margin-bottom: 20px;
   border: 1px solid $base-secondary;
   margin: 0;
- margin: 20px 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -55,12 +55,11 @@
 }
 
 .footer__columns-links {
-
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 39px;
   }
 
   @media (min-width: $desktop-width) {
@@ -79,11 +78,12 @@
     line-height: 20px;
     margin: 0;
     margin-bottom: 50px;
-
   }
 }
 
 .footer__logo-img {
+  display: block;
+  margin-top: 3px;
   height: 36px;
   width: 82px;
 
@@ -91,17 +91,22 @@
     height: 36px;
     width: 170px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+  }
 }
 
 .footer__block--social {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 19px 20px;
+  align-items: start;
+  padding: 0 20px;
   padding-bottom: 0;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 29px;
+    padding: 0;
+    margin-bottom: 32px;
   }
 
   @media (min-width: $desktop-width) {
@@ -113,18 +118,8 @@
 }
 
 .footer__logo-link {
-  font-size: 0;
-}
-
-.footer__logo-link--tablet {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    display: block;
-  }
-
   @media (min-width: $desktop-width) {
-    margin-bottom: 10px;
+    padding-bottom: 10px;
   }
 }
 

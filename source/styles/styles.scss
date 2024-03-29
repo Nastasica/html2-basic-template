@@ -1,10 +1,11 @@
 // Global
-
 @import "global/fonts.scss";
 @import "global/variables.scss";
 @import "global/global-styles.scss";
 @import "global/wrapper.scss";
 @import "global/visually-hidden.scss";
+//Button
+@import "blocks/button/button.scss";
 // Page
 @import "blocks/page/page.scss";
 // Header
@@ -14,18 +15,12 @@
 @import "blocks/header/burger.scss";
 @import "blocks/header/site-navigation.scss";
 @import "blocks/header/user-navigation.scss";
-
 // Promo
-
 @import "blocks/main/promo/promo.scss";
 @import "blocks/main/promo/dots.scss";
-
 // Advantage
-
 @import "blocks/main/advantage/advantage.scss";
-
 // Catalog
-
 @import "blocks/main/catalog/catalog.scss";
 @import "blocks/main/catalog/filter.scss";
 @import "blocks/main/catalog/pagination.scss";
@@ -34,13 +29,9 @@
 @import "blocks/main/catalog/product.scss";
 @import "blocks/main/catalog/sort.scss";
 @import "blocks/main/catalog/catalog-product.scss";
-
 // Map
-
 @import "blocks/main/map/map.scss";
-
 // Footer
-
 @import "blocks/footer/copyright.scss";
 @import "blocks/footer/footer-nav.scss";
 @import "blocks/footer/footer.scss";

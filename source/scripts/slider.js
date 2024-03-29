@@ -43,7 +43,7 @@ function updateUI(index, backgroundColor) {
   if (window.innerWidth >= 768 && window.innerWidth <= 1339) {
     const gradientColor1 = ['#F3EBE1', '#EAE6FC', '#E2E2E2'];
     const gradientColor2 = ['#FFFFFF', '#FFFFFF', '#FFFFFF'];
-    document.querySelector('.promo').style.background = `linear-gradient(180deg, ${gradientColor1[index]} 0%, ${gradientColor1[index]} 77%, ${gradientColor2[index]} 77%, ${gradientColor2[index]})`;
+    document.querySelector('.promo').style.background = `linear-gradient(180deg, ${gradientColor1[index]} 0%, ${gradientColor1[index]} 72%, ${gradientColor2[index]} 72%, ${gradientColor2[index]})`;
   } else {
     document.querySelector('.promo').style.background = backgroundColor;
   }

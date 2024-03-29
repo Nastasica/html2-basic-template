@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
   position: relative;
 
   @media (min-width: $tablet-width) {
@@ -17,14 +16,14 @@
   margin: 0;
 
   @media (min-width: $tablet-width) {
-    margin-right: 11px;
+    margin-right: 13px;
   }
 }
 
 .sort__type {
   position: relative;
   border: none;
-  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -32,21 +31,29 @@
   background-color: transparent;
   text-transform: lowercase;
   cursor: pointer;
-  padding: 4px 30px 4px 10px;
+  padding: 4px 28px 4px 10px;
   border-radius: 4px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 30px;
+  }
 }
 
 .sort__type::after {
-  content: '';
+  content: "";
   position: absolute;
-  background-image: url('../../images/icons/stack.svg#arrow-bottom-sort');
+  background-image: url("../../images/icons/stack.svg#arrow-bottom-sort");
   background-repeat: no-repeat;
   background-position: 0 0;
   width: 10px;
   height: 10px;
-  right: 10px;
+  right: 7px;
   top: 50%;
   transform: translateY(-50%);
+
+  @media (min-width: $tablet-width) {
+    right: 10px;
+  }
 }
 
 .sort__type:hover,
@@ -113,13 +120,11 @@
   background-color: $base-secondary;
 }
 
-/* Выбранный тип сортировки */
 .sort__link--current {
   background-color: $base-primary;
   color: $base-white;
 }
 
-/* Отмена подсвечивания при наведении у выбранного типа сортировки */
 .sort__link--current:hover,
 .sort__link--current:focus {
   background-color: $base-primary;

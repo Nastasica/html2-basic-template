@@ -25,5 +25,5 @@ const marker = L.marker(
   },
   { icon: customIcon }
 );
-
+map.panBy([-10, -10]);
 marker.addTo(map);

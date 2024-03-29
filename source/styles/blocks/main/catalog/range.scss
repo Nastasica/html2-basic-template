@@ -1,6 +1,24 @@
 .range__controls {
-  margin-bottom: 32px;
+  margin-bottom: 35px;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 33px;
+  }
+}
+
+.range__price-controls {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+
+  @media (min-width: $desktop-width) {
+    column-gap: 5px;
+  }
 }
 
 .range__scale {
@@ -25,7 +43,7 @@
 }
 
 .range__toggle::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -52,13 +70,12 @@
 }
 
 .range__toggle:disabled {
-  border-color: $base-grey ;
+  border-color: $base-grey;
 }
 
-.range__toggle:disabled + .range__scale > .range__bar {
-  background-color: $base-grey ;
+.range__toggle:disabled + .range__scale .range__bar {
+  background-color: $base-grey;
 }
-
 
 .range__toggle--min,
 .range__toggle--max {
@@ -71,9 +88,12 @@
   top: -11px;
 }
 
-
 .range__toggle--max {
-  right: 20px;
+  right: 18px;
+
+  @media (min-width: $tablet-width) {
+    right: 20px;
+  }
 }
 
 .range__label--from {
@@ -101,11 +121,11 @@
 }
 
 .range__input {
-  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
-  width: 125px;
+  width: 118px;
   color: $base-black;
   border: 2px solid $primary-lighter;
   border-radius: 4px;
@@ -114,14 +134,29 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    width: 96px;
+    width: 88px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 134px;
+    width: 133px;
   }
 }
 
-.range__input--from {
+.range__input::placeholder {
   color: $base-grey;
+}
+
+.range__input:hover,
+.range__input:focus-visible {
+  border-color: $primary-lighter;
+  outline: none;
+}
+
+.range__input:active {
+  border-color: $primary-darker;
+}
+
+.range__input:disabled {
+  border-color: $base-grey;
+  cursor: not-allowed;
 }

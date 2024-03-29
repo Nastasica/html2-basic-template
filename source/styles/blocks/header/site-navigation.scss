@@ -1,5 +1,3 @@
-/* ========= Site-navigation */
-
 .site-navigation {
   flex-direction: column;
 
@@ -67,15 +65,17 @@
   padding: 20px;
 
   @media (min-width: $tablet-width) {
-    padding: 30px 20px;
+    padding: 27px 20px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 33px;
   }
 }
 
 .site-navigation__link:active {
   background-color: $base-secondary;
 }
-
-/* ============ Tablet */
 
 @media (min-width: 767px) {
   .site-navigation__link--active {
